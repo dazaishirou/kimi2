@@ -1,0 +1,636 @@
+:root {
+  --cont: #1c1c1c;
+  --cont2: #202020;
+  --border: #2e2e2e;
+  --title: 'NemesisGrunge';
+  --text: 'Poppins';
+  --txtc: #d6d6d6;
+}
+
+#s-m-t-tooltip{
+  /* basic */
+  max-width:300px;
+  z-index:10;
+  margin:24px 14px 7px 12px;
+  /* style and design */
+  padding:8px;
+  background:#222; /* fallback if rgba not supported */
+  background:rgba(0,0,0,0.8);
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.15),-1px -1px 0 rgba(255,255,255,0.3);
+  -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.15),-1px -1px 0 rgba(255,255,255,0.3);
+  box-shadow:2px 2px 0 rgba(0,0,0,0.15),-1px -1px 0 rgba(255,255,255,0.3);
+  /* font */
+  font-family:Verdana,Geneva,sans-serif;
+  font-size:11px;
+  line-height:16px;
+  color:#fff;
+}
+
+
+@font-face {
+   font-family: 'NemesisGrunge';
+   src: url(https://files.jcink.net/uploads2/slushpuppy/75d37782-BlackNemesisPerosonalUseDemoGrunge_X82G.ttf);
+}
+
+body {
+  background: url(https://i.imgur.com/OQphGu8.png) center/cover no-repeat fixed;
+   margin: 0px;
+  padding: 0;
+}
+
+ *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(30deg, rgba(69,237,232,0.7) 0%, rgba(251,124,202,0.7) 100%);
+    border-radius: 20px;
+  }
+
+
+#wrapper {
+  width: 1040px;
+  height: auto;
+  background: var(--cont);
+  padding-bottom: 15px;
+}
+
+#header {
+  width: 1040px;
+  height: 635px;
+  background: var(--cont);
+}
+
+#hcont {
+  position: relative;
+  background: var(--cont);
+  width: 1040px;
+  height: 495px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  z-index: 5;
+}
+
+.himg {
+  position: absolute;
+  height: 495px;
+  width: 400px;
+  z-index: 2;
+  clip-path: polygon(0% 0, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.himg img {
+  height: 700px;  
+  width: 500px;
+  margin-left: -65px;
+  margin-top: -30px;
+  filter: contrast(85%);
+  object-fit: cover;
+}
+
+.s1 {
+  background: linear-gradient(0deg, rgba(69,237,232,1) 0%, rgba(251,124,202,1) 100%);
+  height: 495px;
+  width: 100px;
+  clip-path: polygon(0% 0, 20% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  left: -155px;
+  z-index: 1;
+}
+
+.hbig {
+  font-family: 'Intro', sans-serif;
+  font-weight: 800;
+  color: var(--cont);
+  font-size: 40px;
+  letter-spacing: 1px;
+  transform:rotate(80.5deg);
+  white-space: nowrap;
+  position: absolute;
+  margin-left: 154px;
+  margin-top: 206px;
+  z-index: 4;
+  background: -webkit-linear-gradient(0deg, #45ede8 0%, #fb7cca 91%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  text-transform: uppercase;
+}
+
+.hpat {
+  background: url("https://u.cubeupload.com/Sivi/k1.png") repeat;
+  position: absolute;
+  height: 495px;
+  width: 1340px;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.hsym {
+  position: absolute;
+  z-index: 2;
+  margin-left: 410px;
+  margin-top: 8px;
+  transform:rotate(0deg);
+}
+
+.hsym i {
+  font-size: 77px;
+  background: linear-gradient(#45ede8 5%, #fb7cca 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.6;
+}
+
+.hbox {
+  height: 495px;
+  width: 545px;
+  z-index: 3;
+  position: absolute;
+  margin-left: 492px;
+}
+
+.hbox .subtitle {
+  position: absolute;
+  color: var(--cont);
+  background: linear-gradient(30deg, rgba(69,237,232,0.7) 0%, rgba(251,124,202,0.7) 100%);
+  border-radius: 10px;
+  font-family: 'Intro', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  top: 44px;
+  right: 180px;
+  white-space: nowrap;
+  display: block;
+  z-index: 7;
+  transition: all .25s;
+}
+
+.hbox .subtitle:hover{
+  letter-spacing: 15px;
+}
+
+
+.hbox .title {
+  display: block;
+  position: absolute;
+  color: var(--cont);
+  font-family: var(--title);
+  text-transform: capitalize;
+  font-size: 80px;
+  background: -webkit-linear-gradient(0deg, #45ede8 1%, #fb7cca 91%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  white-space: nowrap;
+  z-index: 6;
+  top: 61px;
+  right: 200px;
+}
+
+.hbox .title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hbox .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 330px;
+  margin-top: 190px;
+  margin-left: 90px;
+}
+
+.hbox .buttons a {
+  color: var(--cont2);
+  text-decoration: none;
+  background: linear-gradient(30deg, rgba(69,237,232,0.7) 0%, rgba(251,124,202,0.7) 100%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.hbox .buttons i {
+  font-size: 28px;
+  position: relative;
+  top: 15%;
+}
+
+.hbox .buttons a:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.hbox .topbox {
+  display: block;
+  position: absolute;
+  height: 100px;
+  width: 250px;
+  background: var(--cont2);
+  float: right;
+  border: 1px solid var(--border);
+  right: 138px;
+  top: 250px;
+  z-index: 5;
+  border-radius: 1px;
+  opacity: 0.98;
+}
+
+.hbox .topbox .tbsym i {
+  position: absolute;
+  font-size: 100px;
+  left: 5px;
+  top: 2px;
+  transform:rotate(-2deg);
+  background: linear-gradient(#45ede8 3%, #fb7cca 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.2;
+}
+
+.hbox .topbox .tbinner {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 190px;
+  width: 430px;
+  margin-top: 3px;
+  margin-right: -3px;
+}
+
+.hbox .topbox .tbinner p {
+  font-family: var(--text);
+  font-size: 13.9px;
+  color: var(--txtc);
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 9px;
+  text-transform: lowercase;
+  position: relative;
+}
+
+  .hbox .topbox .tbinner::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .hbox .topbox .tbinner::-webkit-scrollbar-track {
+    background: var(--cont2);
+    margin-right: 10px;
+  }
+
+  .hbox .topbox .tbinner::-webkit-scrollbar-thumb {
+    background: linear-gradient(30deg, rgba(69,237,232,0.7) 0%, rgba(251,124,202,0.7) 100%);
+    border-radius: 15px;
+  }
+
+.hbox .boxsym {
+  position: absolute;
+  z-index: 1;
+  right: -px;
+  bottom: -4px;
+}
+
+.hbox .boxsym i {
+  font-size: 280px;
+  background: linear-gradient(#45ede8 5%, #fb7cca 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.4;
+}
+
+#hbottom {
+  width: 100%;
+  height: auto;
+  background: pink;
+  margin-top: 9px;
+}
+
+#hbottom #staffcont {
+  position: relative;
+  width: 449px;
+  height: 154px;
+  background: var(--cont2);
+  float: right;
+  z-index: 4;
+  margin-top: -8px;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+#hbottom #staffcont #staff {
+  display: flex;
+  justify-content: space-between;
+  width: 410px;
+  margin-right: 1px;
+  margin-top: 13px;
+}
+
+
+
+#hbottom #staffcont #staff .silly img {
+  width: 420px;
+  height: 130px;
+  border-radius: 0%;
+  filter: url(""); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  
+  
+}
+
+#hbottom #staffcont #staff .silly img:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  transition: .7s ease-in-out, box-shadow .7s ease-in-out
+}
+
+
+#hbottom #updatecont {
+  position: relative;
+  width: 250px;
+  height: 153px;
+  background: var(--cont);
+  float: right;
+  z-index: 4;
+  margin-top: -8px;
+}
+
+#hbottom #updatecont #uptit {
+  height: 31px;
+  width: 100%;
+  background: var(--cont2);
+  z-index: 5;
+  position: relative;
+  top: 122px;
+  border-top: 1px solid var(--border);
+}
+
+#hbottom #updatecont #uptit p {
+  font-family: 'Intro', sans-serif;
+  font-weight: 800;
+  font-size: 23px;
+  color: var(--cont2);
+  background: -webkit-linear-gradient(0deg, #45ede8 1%, #fb7cca 91%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  position: relative;
+  top: -24px;
+  letter-spacing: 6px;
+}
+
+#hbottom #updatecont #updatebox {
+  width: 226px;
+  height: 120px;
+  background: var(--cont);
+  margin-top: -30px;
+  overflow: auto;
+  text-align: justify;
+  font-family: var(--text);
+  font-size: 12px;
+  letter-spacing: -1x;
+  line-height: 25px;
+  color: var(--txtc);
+  padding-right: 12px;
+  z-index: 4;
+}
+
+#hbottom #updatecont #updatebox::-webkit-scrollbar {
+    width: 4px;
+  }
+
+#hbottom #updatecont #updatebox::-webkit-scrollbar-track {
+    background: var(--cont);
+    margin-right: 10px;
+  }
+
+#hbottom #updatecont #updatebox::-webkit-scrollbar-thumb {
+    background: linear-gradient(30deg, rgba(69,237,232,0.7) 0%, rgba(251,124,202,0.7) 100%);
+    border-radius: 15px;
+  }
+
+#hbottom #updatecont #updatebox ul {
+  margin-left: -15px;
+  list-style-type: none;
+  text-transform: uppercase;
+  float: left;
+}
+
+#hbottom #updatecont #updatebox li {
+  margin-bottom: 15px;
+}
+
+#hbottom #updatecont #updatebox .date {
+  font-weight: bold;
+  background: linear-gradient(30deg, rgba(69,237,232,0.7) 0%, rgba(251,124,202,0.7) 100%);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  margin-left: -18px;
+  color: var(--cont);
+}
+
+#hbottom #updatecont #updatebox .info {
+  padding-left: 13px;
+}
+
+#hbottom #featuredcont {
+  position: relative;
+  width: 337px;
+  height: 154px;
+  background: var(--cont2);
+  float: right;
+  z-index: 4;
+  margin-top: -8px;
+  border-right: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+#hbottom #featuredcont #one {
+  width: 155px;
+  height: 135px;
+  background: var(--cont);
+  float: left;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  border: 1px solid var(--border);
+}
+
+#hbottom #featuredcont #two {
+  width: 155px;
+  height: 135px;
+  background: var(--cont);
+  float: right;
+  position: relative;
+  top: 8px;
+  right: 8px;
+  border: 1px solid var(--border);
+}
+
+#hnav {
+  height: 74px;
+  width: 1038px;
+  background: var(--cont);
+  margin-top: 155px;
+  border: 1px solid var(--border);
+  position: sticky;
+  display: block;
+  margin-top: 15px;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+
+#hnav #overlay {
+  background: url(https://i.ibb.co/NK6mSJD/Dise-o-sin-t-tulo-26.png) repeat;
+  width: inherit;
+  height: inherit;
+  opacity: 0.2;
+}
+
+#hnav #iconbox {
+  height: 56px;
+  width: 56px;
+  background: linear-gradient(30deg, rgba(69,237,232,0.8) 0%, rgba(251,124,202,0.8) 100%);
+  float: left;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  border-radius: 3px;
+}
+
+#hnav #iconbox #usericon {
+  margin-top: 5px;
+  margin-left: 0px;
+}
+
+#hnav #iconbox #usericon img {
+  border-radius: 3px;
+  height: 46px;
+  width: 46px;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+#hnav #iconbox #usericon img:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  transition: .7s ease-in-out, box-shadow .7s ease-in-out
+}
+
+#hnav #username {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  background: linear-gradient(30deg, rgba(69,237,232,0.8) 0%, rgba(251,124,202,0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Intro', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+#hnav #username::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0px;
+  height: 5px;
+  border-radius: 2px;
+  background: linear-gradient(30deg, rgba(69,237,232,0.8) 0%, rgba(251,124,202,0.8) 100%);
+}
+
+#here {
+  width: 100%;
+  height: 2000px;
+}
+
+
+.nomedoforum {
+    background: url(https://u.cubeupload.com/Sivi/3eck2.png);
+    display: block;
+    width: 320px;
+    height: 310px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 6;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-size: 0px;
+}
+
+/*----- 【 MUSIC PLAYER #08 by @glenthemes 】 -----*/
+[glenplayer08]{
+	
+	/*-- player position --*/
+	--MusicPlayer-Position: "bottom left";
+	--MusicPlayer-Corner-Offset: 50px;
+	
+	/*-- album image --*/
+	--MusicPlayer-Album-Image-Size: 54px;
+	--MusicPlayer-Album-Image-Corner-Roundness: 3px;
+	
+	/*-- player buttons (play/pause) --*/
+	--MusicPlayer-Buttons-Size: 31px;
+	--MusicPlayer-Buttons-Color: #ddd;
+	--MusicPlayer-Buttons-Padding: 8px;
+	--MusicPlayer-Buttons-Border-Size: 1px;
+	--MusicPlayer-Buttons-Border-Color: #bbb;
+	--MusicPlayer-Buttons-Background: #000000;
+	--MusicPlayer-Buttons-Background-Transparency: 45%;
+	--MusicPlayer-Buttons-Background-Blur: 3px;
+	
+	/*-- player song name --*/
+	--MusicPlayer-Song-Name-Size: 12px;
+	--MusicPlayer-Song-Name-Color: #222;
+	
+	/*-- player artist name --*/
+	--MusicPlayer-Artist-Name-Size: 12px;
+	--MusicPlayer-Artist-Name-Color: #777;
+	
+	/*-- player gap/spacing --*/
+	--MusicPlayer-Center-Gap: 14px;
+	--MusicPlayer-Text-Line-Spacing: 4px;
+	
+	/*-- playback settings --*/
+	--MusicPlayer-Autoplay: "no";
+	--MusicPlayer-Replay: "no";
+	
+}/* don't delete this line */
+/*---- END MUSIC PLAYER ----*/
